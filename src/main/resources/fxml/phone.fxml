@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.com.arcadelauncher.controllers.PhoneInputController">
+   <children>
+      <TextField alignment="CENTER" layoutX="116.0" layoutY="160.0" prefHeight="68.0" prefWidth="368.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+      <Button mnemonicParsing="false" prefHeight="62.0" prefWidth="368.0" text="SEND" GridPane.rowIndex="3" onAction="#sendSms">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+   </children>
+</GridPane>
