@@ -1,4 +1,4 @@
-package arcade;
+package ru.com.arcadelauncher;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

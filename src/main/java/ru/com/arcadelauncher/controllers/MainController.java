@@ -1,4 +1,4 @@
-package arcade.controllers;
+package ru.com.arcadelauncher.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
