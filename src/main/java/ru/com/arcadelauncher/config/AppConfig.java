@@ -8,4 +8,5 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan("ru.com.arcadelauncher")
 @EnableTransactionManagement
 public class AppConfig {
+
 }

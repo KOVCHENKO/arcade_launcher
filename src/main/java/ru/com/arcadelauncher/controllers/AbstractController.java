@@ -1,11 +1,24 @@
 package ru.com.arcadelauncher.controllers;
 
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
+import util.SpringLoader;
 
 public class AbstractController implements Controller {
     private Node view;
     private Stage stage;
+
+    Controller runController(String formName) {
+        Controller controller = SpringLoader.loadControllerFxml("/fxml/" + formName + ".fxml");
+        Stage stage = new Stage();
+        Scene scene = new Scene((Parent) controller.getView());
+        stage.setScene(scene);
+        stage.setMaximized(true);
+        stage.show();
+        return controller;
+    }
 
     @Override
     public Node getView() {

@@ -10,7 +10,7 @@ import util.SpringLoader;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Stage stageMain = new Stage();
         MainController controller = (MainController) SpringLoader.loadControllerFxml("/fxml/main.fxml");
         Scene scene = new Scene((Parent) controller.getView());
