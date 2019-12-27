@@ -11,5 +11,10 @@
             <Font size="20.0" />
          </font>
       </TextField>
+      <Button id="transparent-button" mnemonicParsing="false" prefHeight="62.0" prefWidth="368.0" text="VERIFY" GridPane.rowIndex="3" onAction="#verifyCode">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
    </children>
 </GridPane>

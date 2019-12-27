@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import ru.com.arcadelauncher.entity.Code;
 import ru.com.arcadelauncher.services.IPhoneInputService;
 
 @Component("PhoneInputController")
@@ -22,7 +23,12 @@ public class PhoneInputController extends AbstractController {
 
         if (responseStatus == HttpStatus.OK.value()) {
             System.out.println(responseStatus);
-            CodeController controller = (CodeController) runController("code");
+            CodeController codeController = (CodeController) runController("code");
+
+            Code newCode = new Code();
+            newCode.setCode("123123");
+            newCode.setId(123);
+            codeController.code = newCode;
         } else {
             System.out.println("IMPOSSIBLE TO KNOCK");
         }
