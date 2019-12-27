@@ -8,11 +8,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 
-
-public class MainController {
+@Component("MainController")
+public class MainController extends AbstractController {
 
     @FXML
     public void start(ActionEvent event) {
