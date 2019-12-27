@@ -11,14 +11,21 @@ import ru.com.arcadelauncher.repositories.PhoneInputRepository;
 @Service("PhoneInputService")
 public class PhoneInputService implements IPhoneInputService {
 
+    private Code code;
+
     @Autowired
     private PhoneInputRepository phoneInputRepository;
 
+    @Autowired
+    private CodeService codeService;
+
     public int sendSms() {
         ClientResponse clientResponse = phoneInputRepository.sendSms();
-
-        Code code = clientResponse.getEntity(Code.class);
-
+        code = clientResponse.getEntity(Code.class);
         return clientResponse.getStatus();
+    }
+
+    public void defineCode() {
+        codeService.initCode(code);
     }
 }

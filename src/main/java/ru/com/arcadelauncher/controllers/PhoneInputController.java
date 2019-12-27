@@ -25,10 +25,7 @@ public class PhoneInputController extends AbstractController {
             System.out.println(responseStatus);
             CodeController codeController = (CodeController) runController("code");
 
-            Code newCode = new Code();
-            newCode.setCode("123123");
-            newCode.setId(123);
-            codeController.code = newCode;
+            phoneInputService.defineCode();
         } else {
             System.out.println("IMPOSSIBLE TO KNOCK");
         }
