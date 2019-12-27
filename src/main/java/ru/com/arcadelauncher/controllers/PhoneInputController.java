@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import ru.com.arcadelauncher.entity.Code;
 import ru.com.arcadelauncher.services.IPhoneInputService;
 
 @Component("PhoneInputController")
