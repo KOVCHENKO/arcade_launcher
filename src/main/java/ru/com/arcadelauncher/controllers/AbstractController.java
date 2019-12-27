@@ -4,6 +4,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import util.SpringLoader;
 
 public class AbstractController implements Controller {
@@ -15,6 +16,7 @@ public class AbstractController implements Controller {
         Stage stage = new Stage();
         Scene scene = new Scene((Parent) controller.getView());
         stage.setScene(scene);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setMaximized(true);
         stage.show();
         return controller;

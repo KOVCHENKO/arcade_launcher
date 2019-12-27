@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import ru.com.arcadelauncher.controllers.MainController;
 import util.SpringLoader;
 
@@ -14,6 +15,7 @@ public class Main extends Application {
         Stage stageMain = new Stage();
         MainController controller = (MainController) SpringLoader.loadControllerFxml("/fxml/main.fxml");
         Scene scene = new Scene((Parent) controller.getView());
+        stageMain.initStyle(StageStyle.UNDECORATED);
         stageMain.setScene(scene);
         stageMain.setMaximized(true);
 
