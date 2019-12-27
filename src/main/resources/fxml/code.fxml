@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane id="pane" alignment="center" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.com.arcadelauncher.controllers.CodeController">
+   <children>
+      <TextField alignment="CENTER" layoutX="116.0" layoutY="160.0" prefHeight="68.0" prefWidth="368.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextField>
+   </children>
+</GridPane>

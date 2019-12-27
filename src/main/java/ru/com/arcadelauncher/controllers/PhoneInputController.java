@@ -1,10 +1,9 @@
 package ru.com.arcadelauncher.controllers;
 
-import com.sun.jersey.api.client.ClientResponse;
 import javafx.fxml.FXML;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
-import ru.com.arcadelauncher.entity.Code;
 import ru.com.arcadelauncher.services.IPhoneInputService;
 
 @Component("PhoneInputController")
@@ -19,11 +18,13 @@ public class PhoneInputController extends AbstractController {
 
     @FXML
     public void sendSms() {
-        ClientResponse clientResponse = phoneInputService.sendSms();
+        int responseStatus = phoneInputService.sendSms();
 
-        Code code = clientResponse.getEntity(Code.class);
-
-        System.out.println(code.getCode());
-        System.out.println(code.getId());
+        if (responseStatus == HttpStatus.OK.value()) {
+            System.out.println(responseStatus);
+            CodeController controller = (CodeController) runController("code");
+        } else {
+            System.out.println("IMPOSSIBLE TO KNOCK");
+        }
     }
 }
