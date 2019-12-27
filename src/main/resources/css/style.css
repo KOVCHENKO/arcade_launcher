@@ -1,0 +1,18 @@
+#pane{
+    -fx-background-image: url("/images/background.jpg");
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+    width:100%;
+    height:100%;
+}
+
+#transparent-button{
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: transparent;
+    -fx-font-size: 50pt;
+    -fx-text-fill: white;
+    -fx-font-weight: bolder;
+}

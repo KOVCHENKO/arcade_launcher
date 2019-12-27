@@ -15,6 +15,7 @@ public class AbstractController implements Controller {
         Controller controller = SpringLoader.loadControllerFxml("/fxml/" + formName + ".fxml");
         Stage stage = new Stage();
         Scene scene = new Scene((Parent) controller.getView());
+        scene.getStylesheets().addAll(this.getClass().getResource("/css/style.css").toExternalForm());
         stage.setScene(scene);
         stage.initStyle(StageStyle.UNDECORATED);
         stage.setMaximized(true);
