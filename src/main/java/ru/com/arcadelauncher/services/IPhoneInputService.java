@@ -1,5 +1,7 @@
 package ru.com.arcadelauncher.services;
 
+import com.sun.jersey.api.client.ClientResponse;
+
 public interface IPhoneInputService {
-    public void sendSms();
+    public ClientResponse sendSms();
 }
