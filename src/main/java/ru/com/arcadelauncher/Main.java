@@ -23,7 +23,7 @@ public class Main extends Application {
         scene.getStylesheets().addAll(this.getClass().getResource("/css/style.css").toExternalForm());
         stageMain.initStyle(StageStyle.UNDECORATED);
         stageMain.setScene(scene);
-//        stageMain.setMaximized(true);
+        stageMain.setMaximized(true);
 
         stageMain.show();
 
